@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/bingo-tracker/static/css/main.f50b69cc.css",
+    "main.js": "/bingo-tracker/static/js/main.1fbd5326.js",
+    "index.html": "/bingo-tracker/index.html",
+    "main.f50b69cc.css.map": "/bingo-tracker/static/css/main.f50b69cc.css.map",
+    "main.1fbd5326.js.map": "/bingo-tracker/static/js/main.1fbd5326.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f50b69cc.css",
+    "static/js/main.1fbd5326.js"
+  ]
+}

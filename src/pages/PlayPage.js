@@ -7,6 +7,18 @@ const PlayPage = () => {
   const [revealedNumbers, setRevealedNumbers] = useState([]);
   const [inputNumber, setInputNumber] = useState('');
 
+  const handleInputChange = (e) => {
+    const value = e.target.value;
+    if (value === '') {
+      setInputNumber(value);
+    } else {
+      const number = parseInt(value, 10);
+      if (!isNaN(number) && number >= 1 && number <= 99) {
+        setInputNumber(value);
+      }
+    }
+  };
+
   const handleAddCard = () => {
     if (bingoCards.length < 6) {
       const newCard = Array(25).fill('');
@@ -53,34 +65,34 @@ const PlayPage = () => {
           +
         </button>
         <div className="flex flex-wrap justify-center">
-          {bingoCards.map((cardNumbers, index) => (
-            <div key={index} className="mb-4">
-              <BingoCard
+        {bingoCards.map((cardNumbers, index) => (
+            <div key={index} className="m-4 flex flex-col items-end relative">
+            <button
+                className="bg-red-500 text-white px-3 py-1 rounded border mb-2"
+                onClick={() => handleRemoveCard(index)}
+            >
+                -
+            </button>
+            <div className="flex justify-center w-full">
+                <BingoCard
                 cardNumbers={cardNumbers}
                 revealedNumbers={revealedNumbers}
                 onRemoveCard={() => handleRemoveCard(index)}
-                onUpdateCell={(cellIndex, value) =>
-                  handleUpdateCell(index, cellIndex, value)
-                }
-              />
-              <button
-                className="bg-red-500 text-white px-2 py-1 rounded border mt-2"
-                onClick={() => handleRemoveCard(index)}
-              >
-                -
-              </button>
+                onUpdateCell={(cellIndex, value) => handleUpdateCell(index, cellIndex, value)}
+                />
             </div>
-          ))}
+            </div>
+        ))}
         </div>
       </div>
       <div className="mt-8 flex justify-center">
         <div className="flex items-center">
           <input
-            type="text"
+            type="text" // Keep type as text to better handle leading zeroes
             value={inputNumber}
-            onChange={(e) => setInputNumber(e.target.value)}
+            onChange={handleInputChange}
             placeholder="Enter a number"
-            className="mr-2"
+            className="mr-2 p-2"
           />
           <button
             className="bg-blue-500 text-white px-4 py-2 rounded"

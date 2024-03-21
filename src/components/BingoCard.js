@@ -3,9 +3,6 @@ import BingoCell from './BingoCell';
 
 const BingoCard = ({ cardNumbers, revealedNumbers, onRemoveCard, onUpdateCell }) => {
   const isCellRevealed = (number) => {
-    console.log("is " + number + " revealed?")
-    console.log("revealed nums: "+ revealedNumbers)
-    console.log("prob false: " + revealedNumbers.includes(parseInt(number)))
     return revealedNumbers.includes(parseInt(number));
   };
 

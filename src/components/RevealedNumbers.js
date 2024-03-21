@@ -8,7 +8,7 @@ const RevealedNumbers = ({ revealedNumbers, onRemoveNumber }) => {
         {revealedNumbers.map((number, index) => (
           <li key={index}>
             {number}
-            <button onClick={() => onRemoveNumber(index)} className="p-2" >X </button>
+            <button onClick={() => onRemoveNumber(index)} className="p-2" >X</button>
           </li>
         ))}
       </ul>

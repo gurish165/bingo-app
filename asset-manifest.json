@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/bingo-tracker/static/css/main.f8561202.css",
-    "main.js": "/bingo-tracker/static/js/main.77063ce1.js",
+    "main.css": "/bingo-tracker/static/css/main.11219a1b.css",
+    "main.js": "/bingo-tracker/static/js/main.3041276d.js",
     "index.html": "/bingo-tracker/index.html",
-    "main.f8561202.css.map": "/bingo-tracker/static/css/main.f8561202.css.map",
-    "main.77063ce1.js.map": "/bingo-tracker/static/js/main.77063ce1.js.map"
+    "main.11219a1b.css.map": "/bingo-tracker/static/css/main.11219a1b.css.map",
+    "main.3041276d.js.map": "/bingo-tracker/static/js/main.3041276d.js.map"
   },
   "entrypoints": [
-    "static/css/main.f8561202.css",
-    "static/js/main.77063ce1.js"
+    "static/css/main.11219a1b.css",
+    "static/js/main.3041276d.js"
   ]
 }

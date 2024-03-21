@@ -35,7 +35,6 @@ const BingoCard = ({ cardNumbers, revealedNumbers, onRemoveCard, onUpdateCell })
           })}
         </div>
       ))}
-      <button className="mt-2" onClick={onRemoveCard}>-</button>
     </div>
   );
 };
